@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# first input the number (diameter) must be odd
+# then input the sign of your diamond
+# example:
+# 5 %
+# 9 *
+
 diameter=$1
 sign=$2
 
