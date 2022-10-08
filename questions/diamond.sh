@@ -61,16 +61,21 @@ generate_diamond() {
 }
 
 while true; do
-  echo "please enter an ODD number for diameter and a CHAR to generate a diamond"
-  read -r diameter sign
+  if [[ -z "$diameter" && -z "$sign" ]]; then
+    echo "please enter an ODD number for diameter and a CHAR to generate a diamond"
+    echo "ctrl + c to exit"
+    read -r diameter sign
+  fi
+
+  #  read -r diameter sign
   condition=$(get_input "$diameter" "$sign")
   if [[ "$condition" == "true" ]]; then
     if ((diameter % 2 != 0)); then
       break
     fi
-    echo "please enter an odd number!"
-    sleep 2
-    clear
+    condition=false
+    diameter=""
+    sign=""
   fi
   clear
 done
