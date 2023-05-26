@@ -7,7 +7,7 @@ echo "file exists or not"
 [[ -e "ali" ]] && echo "yes"
 echo ""
 
-# check is a file is a dir
+# check if a file is a dir
 echo "file or directory"
 [[ -d file.sh ]] && echo "yes" || echo "not a dir"
 [[ -d "file.sh" ]] && echo "yes" || echo "not a dir"
@@ -15,7 +15,7 @@ echo "file or directory"
 [[ -d "ali" ]] && echo "yes" || echo "not a dir"
 echo ""
 
-# check is a file is a dir
+# check if a file is regular or not
 echo "file is regular or not"
 [[ -f ali ]] && echo "regular" || echo "not a regular"
 echo ""
