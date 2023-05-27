@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# ${} -> parameter expansion
 # some environment variables are:
 printf "HOME: %s \n" "${HOME}"
 printf "USER: %s \n" "${USER}"
